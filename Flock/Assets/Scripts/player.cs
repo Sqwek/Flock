@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class player : MonoBehaviour
 {
     private Vector3 target;
+    public int Key1Level;
 
     // Start is called before the first frame update
     void Start()
@@ -33,5 +34,14 @@ public class player : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+        else if (collision.gameObject.tag == "Key1")
+        {
+            SceneManager.LoadScene(2);
+            Debug.Log(2);
+        }
+        //if (collision.gameObject.tag == "key1")
+        //{
+        //SceneManager.LoadScene(2);
+        //}
     }
 }

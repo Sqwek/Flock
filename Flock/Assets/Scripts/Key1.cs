@@ -17,11 +17,15 @@ public class Key1 : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter(Collider enter)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collider.gameObject.tag == "player")
+        //if (collision.gameObject.tag == "player")
         {
             SceneManager.LoadScene(0);
+        }
+        //if (collision.gameObject.tag == "key1")
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }
